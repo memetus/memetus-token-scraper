@@ -22,7 +22,7 @@ This repository does not include any code or logic to AI Agent training. This re
   | ├── logger / # handle logger utils
   | ├── writer / # handle writer utils
   | ├── parser / # handle parser utils
-  └── package.json # application dependencies
+  └── README.md
 ```
 
 #### Feature
