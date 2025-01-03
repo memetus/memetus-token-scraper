@@ -29,7 +29,7 @@ This repository does not include any code or logic to AI Agent training. This re
 
 - search token by twitter keyword
 - search token related twitter account to train emotional analyzer
-- search token by twitter account(might be KoL) post
+- search token by twitter account(might be KoL account or Project account) post
 - search token metadata by dexscreener
 - scrap token chart by selenium
 
