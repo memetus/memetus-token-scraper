@@ -2,7 +2,7 @@
 
 ---
 
-This repository does not include any code or logic to AI Agent training. This repository contains code for collecting tokens and token information from Twitter, Dexscreener, and GeckoTerminal. The collected data will be stored in a database as part of the dataset used to train the Agent and as potential tradeable item options for the Agent. While we are understanding that direct access to RPC endpoints or other sources like Raydium could be used to gather token information, this repository excludes those since they are implemented in TypeScript.
+This repository does not include any code or logic to AI Agent training. This repository contains code for collecting tokens and token information from Twitter, Dexscreener, GeckoTerminal, News scrap and Googling. The collected data will be stored in a database as part of the dataset used to train the Agent and as potential tradeable item options for the Agent. While we are understanding that direct access to RPC endpoints or other sources like Raydium could be used to gather token information, this repository excludes those since they are implemented in TypeScript.
 
 #### Directory Structure
 
@@ -32,6 +32,7 @@ This repository does not include any code or logic to AI Agent training. This re
 - search token by twitter account(might be KoL account or Project account) post
 - search token metadata by dexscreener
 - scrap token chart by selenium
+- search token by news scrap and googling module
 
 #### Requirement
 
@@ -47,12 +48,27 @@ selenium = "^4.27.1"
 seleniumbase = "^4.33.12"
 tweepy = "^4.14.0"
 python-dotenv = "^1.0.1"
+openai = "^1.59.2"
+langchain = "^0.3.13"
+langchain-community = "^0.3.13"
+langchainhub = "^0.1.21"
+langgraph = "^0.2.60"
+langsmith = "^0.2.7"
+langchain-openai = "^0.2.14"
+langchain-text-splitters = "^0.3.4"
+langchain-cohere = "^0.3.4"
+langchain-milvus = "^0.1.7"
+tavily-python = "^0.5.0"
+langchain-experimental = "^0.3.4"
 ```
 
 #### Environment Variable
 
 ```bash
 TWITTER_AUTH_TOKEN
+OPENAI_API_KEY
+TAVILY_API_KEY
+SERP_API_KEY
 ```
 
 #### Usage
