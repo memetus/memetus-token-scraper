@@ -2,7 +2,7 @@
 
 ---
 
-This repository does not include any code or logic to AI Agent training. This repository contains code for collecting tokens and token information from Twitter, Dexscreener, and GeckoTerminal. The collected data will be stored in a database as part of the dataset used to train the Agent and as potential tradeable item options for the Agent. While it's understood that direct access to RPC endpoints or other sources like Raydium could be used to gather token information, this repository excludes those since they are implemented in TypeScript.
+This repository does not include any code or logic to AI Agent training. This repository contains code for collecting tokens and token information from Twitter, Dexscreener, and GeckoTerminal. The collected data will be stored in a database as part of the dataset used to train the Agent and as potential tradeable item options for the Agent. While we are understanding that direct access to RPC endpoints or other sources like Raydium could be used to gather token information, this repository excludes those since they are implemented in TypeScript.
 
 #### Directory Structure
 
