@@ -15,14 +15,15 @@ def format_json_to_jsonl_sentiment(input_files: List[str]) -> None:
     output_file = input_file.replace('.json', '.jsonl')
     with open(input_file, 'r', encoding='utf-8') as infile:
       data = json.load(infile)  
-      print(data)
-      json_data = []
-
-      for row in data:
-        json_data.append({ 'message': [{ 'role': 'user', 'content': row['score']}, { "role": 'assistant', 'content': row['text']}]})
     with open(output_file, 'w', encoding='utf-8') as outfile:
-        json.dump(json_data, outfile)  
-        outfile.write("\n")
+        for row in data:
+          json.dump({ 
+            'messages': [
+              { 'role': 'user', 'content': row['text']},
+              { "role": 'assistant', 'content': 'The sentiment score is' + row['score']}
+            ]
+          }, outfile, ensure_ascii=False)
+          outfile.write("\n")
 
 if __name__ == "__main__":
   argv = sys.argv[1:]
