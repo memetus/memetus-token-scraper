@@ -1148,6 +1148,26 @@ files = [
 ]
 
 [[package]]
+name = "kagglehub"
+version = "0.3.6"
+description = "Access Kaggle resources anywhere"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "kagglehub-0.3.6-py3-none-any.whl", hash = "sha256:fac03aeb53cb75ab1d0ed464eb2198d022548c0589983d2e061323db5816ff52"},
+    {file = "kagglehub-0.3.6.tar.gz", hash = "sha256:3e9485f8ff59d87d1055f1cb22369ffd943826492ff586368ba1934a58c11291"},
+]
+
+[package.dependencies]
+packaging = "*"
+requests = "*"
+tqdm = "*"
+
+[package.extras]
+hf-datasets = ["datasets", "pandas"]
+pandas-datasets = ["pandas"]
+
+[[package]]
 name = "langchain"
 version = "0.3.13"
 description = "Building applications with LLMs through composability"
@@ -4004,4 +4024,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ce3d59e469545f3723840a247a0d3325499e7dba6a0f2af12abebfa19c4a4b93"
+content-hash = "4f393fefbababc4ec0c5563a26744757a887c591235d6ea3ae6cb14804fb98a0"
