@@ -13,6 +13,8 @@ from langgraph.graph import StateGraph
 from langgraph.checkpoint.memory import MemorySaver
 from datetime import datetime
 
+load_dotenv()
+
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ["TAVILY_API_KEY"] = os.getenv("TAVILY_API_KEY")
 os.environ["SERP_API_KEY"] = os.getenv('SERP_API_KEY')
@@ -20,8 +22,6 @@ os.environ["SERP_API_KEY"] = os.getenv('SERP_API_KEY')
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 TAVILY_API_KEY = os.environ["TAVILY_API_KEY"]
 SERP_API_KEY = os.environ["SERP_API_KEY"]
-
-load_dotenv()
 
 class TavilySearchResults(TypedDict):
   messages: Annotated[list, add_messages]
