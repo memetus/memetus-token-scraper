@@ -58,3 +58,37 @@ def get_serp_result():
       ensure_ascii=False,
       indent=2)
 
+
+def get_tavily_by_address():
+  input_file = ''
+
+  with open(input_file, 'r', encoding="utf-8") as file:
+    datas = json.load(file)
+    tokens = []
+
+    for data in datas:
+      print(data.get('name'), 'is processing')
+      type_str = ", ".join(data.get('types'))
+      query = f''
+      response = tavily_client.search(query=query)
+      ress = response['results']
+      descs = []
+
+      for res in ress:
+        descs.append(f"###title\n{res['title']}\n###content{res['content']}")
+      
+      tokens.append({
+        'name': data['name'],
+        'symbol': data['symbol'],
+        'address': data['address'],
+        'types': data['types'],
+        'urls': data['urls'],
+        'descriptions': descs
+      })
+
+    output_file = input_file.replace('.json', 'output.json')
+    with open(output_file, 'w', encoding='utf-8') as file:
+      json.dump(tokens,
+      file,
+      ensure_ascii=False,
+      indent=2)
