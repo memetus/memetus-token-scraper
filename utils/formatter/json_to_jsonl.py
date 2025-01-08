@@ -20,7 +20,7 @@ def format_json_to_jsonl_sentiment(input_files: List[str]) -> None:
           json.dump({ 
             'messages': [
               { 'role': 'user', 'content': row['text']},
-              { "role": 'assistant', 'content': 'The sentiment score is' + row['score']}
+              { "role": 'assistant', 'content': 'The sentiment score is ' + row['score']}
             ]
           }, outfile, ensure_ascii=False)
           outfile.write("\n")
