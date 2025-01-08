@@ -10,11 +10,15 @@ load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ["TAVILY_API_KEY"] = os.getenv("TAVILY_API_KEY")
+os.environ["SERP_API_KEY"] = os.getenv('SERP_API_KEY')
 
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 TAVILY_API_KEY = os.environ["TAVILY_API_KEY"]
+SERP_API_KEY = os.environ["SERP_API_KEY"]
+
 
 tavily_client = TavilyClient(api_key=TAVILY_API_KEY)
+serp_client = SerpAPIWrapper(serpapi_api_key=SERP_API_KEY)
 
 def get_serp_result():
   input_file = ''
